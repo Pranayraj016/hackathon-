@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      svg {
+        animation: bounce 1.5s infinite ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="logo">
+      <a href="#"><img src="./img/logo.png" alt="Logo" id="logoimg" /></a>
+
+      <!-- Hamburger Menu Icon -->
+      <div class="menu-icon" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul id="menu">
+        <li><a href="#" id="home">Home</a></li>
+        <li><a href="#" id="about">About</a></li>
+        <li><a href="#" id="theme">Themes</a></li>
+        <li><a href="#" id="sponsors">Sponsors</a></li>
+        <li><a href="#" id="team">Team</a></li>
+        <li><a href="#" id="faq">FAQ's</a></li>
+        <li><a href="#" id="contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Banner -->
+    <section class="banner">
+      <div class="content">
+        <img src="./img/12a.png" class="footer-logo" />
+        <h3>TECH-VISOR CLUB PRESENTS</h3>
+        <h1><span>GLB-</span>Hackathon <span class="version">4.0</span></h1>
+        <p>Dream. Build. Achieve. Succeed.</p>
+        <p>25 <sup>th</sup> April 2025</p>
+        <div class="registion" id="registration-section">
+          <button class="whatsapp-btn">WhatsApp</button>
+          <button class="registration-btn">Registration</button>
+        </div>
+      </div>
+    </section>
+    <!-- About -->
+    <section class="about">
+      <div>
+        <h1 id="about-page">About</h1>
+        <p>
+          With a firm belief that only professional education has a potential to
+          lay a strong foundation that can result in the blissful economic and
+          social changes to the lives of millions, Rajiv Memorial Academic
+          Welfare Society went about reshaping diligent and dedicated Indian
+          youths in the form of global multifaceted talents through an array of
+          Educational Institutions. Incepted in the year 1997, the group has
+          demonstrated meteoric growth since the beginning. Today, it has become
+          one of the most prestigious educational hub solely devoted to equip
+          thousands of young students in the array of higher education in
+          diversified fields i.e,. Engineering & Technology, Management,
+          Pharmacy, Dentistry, Teacher Education, Basic Science & Library
+          Science and Medical Science. Presently 12 institutes are thriving
+          under the banner.
+        </p>
+      </div>
+      <div>
+        <h1>About the GL Bajaj Institute of Management</h1>
+        <p>
+          Welcome to GL Bajaj Institute of Management, Greater Noida Driven by a
+          strong inclination towards imparting quality education, GL Bajaj
+          Institute of Management, Greater Noida is one of the finest
+          Educational Institute in the Greater Noida/Delhi-NCR region. Since the
+          establishment of GL Bajaj Group, our skilled faculty share their
+          knowledge with their students in the best possible way to find
+          solutions to their complex issues and problems . Since its
+          establishment in the year 1997, GL Bajaj Group has embraced quality
+          and innovation favourable for the overall development of its students.
+          Continuing on its path of growth, GL Bajaj Group experienced the
+          greatest period of success in its history with 9 campuses located in
+          NCR and Mathura. Gl Bajaj Group has been successfully building strong
+          professionals in the field of Management, Technology, Education,
+          Dental Science, Engineering, Pharmacy and Library Sciences. Thanks to
+          Mr. Pankaj Agrawal, Vice Chairman, G L Bajaj Educational Institutions,
+          whose selfless work has won laurels for the G L Bajaj Group at various
+          platforms. G L Bajaj Institute of Management, Greater Noida is one of
+          the prestigious Institutions under the G L Bajaj Group offering
+          Bachelor of Business Administration (BBA) and Bachelor of Computer
+          Application (BCA). The Institute is affiliated to Chaudhary Charan
+          Singh University (CCS), Meerut.
+        </p>
+      </div>
+      <div>
+        <h1>About the event</h1>
+        <p>
+          Welcome to the dawn of a groundbreaking era in innovation and
+          technology! Welcome to GLB Hackathon 4.0 – a convergence of
+          brilliance, creativity, and limitless potential. Prepare to embark on
+          an exhilarating adventure as we usher in a new phase of our legacy.
+          This isn't merely a hackathon; it's a harmonious collaboration of
+          minds, a tribute to ingenuity, and an expedition into uncharted realms
+          of coding mastery. AT GLB Hackathon 4.0 ,We extend an invitation to
+          join us in shattering barriers, pushing limits, and sculpting
+          solutions that defy convention. It's more than just coding; it's about
+          forging bonds, refining talents, and unlocking your fullest
+          capabilities in a vibrant and charged environment. Join us as we
+          embark on this extraordinary voyage, where innovation knows no
+          boundaries, and every obstacle is a chance to ascend to greater
+          heights. Prepare to be inspired, challenged, and awestruck as we
+          redefine the very essence of hacking. The stage is set, the
+          anticipation is tangible, and the opportunities are boundless. Are you
+          prepared to seize them?
+        </p>
+      </div>
+      <div class="event-details">
+        <div>
+          <h1>Venue</h1>
+          <p>
+            [In-Person] - GL Bajaj Institute of Management, Greater Noida, UP
+          </p>
+        </div>
+        <div>
+          <h1>Dates</h1>
+          <p>25 <sup>th</sup> April 2025</p>
+        </div>
+      </div>
+      <div class="stats-section">
+        <div class="stat-item">
+          <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#63b3ed"
+            stroke="#63b3ed"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M18 9H4V8h14zm-5 3H4v1h9zm8-8v9h-1V5H2v13h9v1H1V4zm2.07 11.637l-.707-.707-5.863 5.863-2.863-2.863-.707.707 3.57 3.57z"
+              ></path>
+              <path fill="none" d="M0 0h24v24H0z"></path>
+            </g>
+          </svg>
+          <h2>2800+</h2>
+          <p>Registrations</p>
+        </div>
+
+        <div class="stat-item">
+          <svg
+            height="200px"
+            width="200px"
+            version="1.1"
+            id="_x32_"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 512 512"
+            xml:space="preserve"
+            fill="#63b3ed"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <style type="text/css">
+                .st0 {
+                  fill: #63b3ed;
+                }
+              </style>
+              <g>
+                <path
+                  class="st0"
+                  d="M364.038,355.035c-19.948-7.458-49.037-29.238-49.037-42.797c0-8.983,0-20.205,0-35.587 c11.528-12.826,20.294-38.864,25.504-68.38c12.152-4.338,19.096-11.281,27.771-41.658c9.221-32.358-13.886-31.258-13.886-31.258 c18.69-61.873-5.913-120.022-47.125-115.753c-28.426-49.73-123.636,11.36-153.468,7.102c0,17.055,7.102,29.842,7.102,29.842 c-10.37,19.69-6.37,58.951-3.458,78.809c-1.684-0.03-22.581,0.188-13.717,31.258c8.676,30.376,15.619,37.32,27.772,41.658 c5.2,29.516,13.965,55.554,25.504,68.38c0,15.382,0,26.604,0,35.587c0,13.559-30.901,36.399-49.036,42.797 c-37.469,13.193-129.54,51.136-123.597,122.21C25.792,494.301,119.577,512,256,512c136.414,0,230.209-17.699,231.635-34.755 C493.577,406.102,401.269,368.961,364.038,355.035z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+          <h2>800+</h2>
+          <p>Attendees</p>
+        </div>
+
+        <div class="stat-item">
+          <svg
+            width="100"
+            height="100"
+            viewBox="0 0 64 64"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#63b3ed"
+            stroke="#63b3ed"
+            stroke-width="2"
+          >
+            <!-- Roof -->
+            <polygon points="32,4 2,20 62,20" fill="#63b3ed" />
+
+            <!-- Columns -->
+            <rect x="12" y="20" width="8" height="30" fill="#63b3ed" />
+            <rect x="28" y="20" width="8" height="30" fill="#63b3ed" />
+            <rect x="44" y="20" width="8" height="30" fill="#63b3ed" />
+
+            <!-- Base -->
+            <rect x="8" y="50" width="48" height="6" fill="#63b3ed" />
+          </svg>
+
+          <h2>60+</h2>
+          <p>Colleges</p>
+        </div>
+
+        <div class="stat-item">
+          <svg
+            fill="#63b3ed"
+            viewBox="0 0 50 50"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M10 4L10 20L2.9941406 20L3.1464844 46L17.046875 46L19.046875 46L33 46L47 46L47 8L31 8L31 9L31 28L25.996094 28L25.996094 4.0078125L10 4 z M 12 6L23.996094 6.0078125L23.996094 28L19.013672 28L18.998047 20L18 20L12 20L12 6 z M 15 8L15 10L17 10L17 8L15 8 z M 19.039062 8L19.039062 10L21 10L21 8L19.039062 8 z M 33 10L45 10L45 44L39.960938 44L39.960938 40L38 40L38 44L33 44L33 28L33 10 z M 15 12L15 14L17 14L17 12L15 12 z M 19 12L19 14L21 14L21 12L19 12 z M 36 12.003906L36 14L38 14L38 12.003906L36 12.003906 z M 40.019531 12.007812L40.019531 14.021484L41.980469 14.021484L41.980469 12.007812L40.019531 12.007812 z M 36 16.015625L36 18L38 18L38 16.015625L36 16.015625 z M 40.019531 16.015625L40.019531 18L41.980469 18L41.980469 16.015625L40.019531 16.015625 z M 36 20L36 22L38 22L38 20L36 20 z M 40 20L40 22L41.980469 22L41.980469 20L40 20 z M 5.0058594 22L17.001953 22L17.013672 28L16.998047 28L17.041016 44L11.980469 44L11.980469 40L10.019531 40L10.019531 44L5.1347656 44L5.0058594 22 z M 8 24L8 26.015625L10.039062 26.015625L10.039062 24L8 24 z M 12.039062 24L12.039062 26.015625L14 26.015625L14 24L12.039062 24 z M 36 24.007812L36 25.998047L38 25.998047L38 24.007812L36 24.007812 z M 40 24.007812L40 25.998047L41.980469 25.998047L41.980469 24.007812L40 24.007812 z M 8 27.984375L8 30L10.039062 30L10.039062 27.984375L8 27.984375 z M 12.039062 27.984375L12.039062 30L14 30L14 27.984375L12.039062 27.984375 z M 36 27.992188L36 30.007812L38 30.007812L38 27.992188L36 27.992188 z M 40.019531 27.992188L40.019531 30.007812L41.980469 30.007812L41.980469 27.992188L40.019531 27.992188 z M 19.017578 30L31 30L31 44L26 44L26 40L24 40L24 44L19.042969 44L19.017578 30 z M 8 32L8 34.015625L10.039062 34.015625L10.039062 32L8 32 z M 12.039062 32L12.039062 34.015625L14 34.015625L14 32L12.039062 32 z M 22 32L22 34.015625L24 34.015625L24 32L22 32 z M 26 32L26 34.015625L28 34.015625L28 32L26 32 z M 36 32L36 34.015625L38 34.015625L38 32L36 32 z M 40.019531 32L40.019531 34.015625L41.980469 34.015625L41.980469 32L40.019531 32 z M 22 35.984375L22 38L24 38L24 35.984375L22 35.984375 z M 26 35.984375L26 38L28 38L28 35.984375L26 35.984375 z M 36 35.984375L36 38L38 38L38 35.984375L36 35.984375 z M 40.019531 35.984375L40.019531 38L41.980469 38L41.980469 35.984375L40.019531 35.984375 z"
+              ></path>
+            </g>
+          </svg>
+          <h2>30+</h2>
+          <p>Cities</p>
+        </div>
+
+        <div class="stat-item">
+          <svg
+            fill="#63b3ed"
+            viewBox="0 0 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M16.114-0.011c-6.559 0-12.114 5.587-12.114 12.204 0 6.93 6.439 14.017 10.77 18.998 0.017 0.020 0.717 0.797 1.579 0.797h0.076c0.863 0 1.558-0.777 1.575-0.797 4.064-4.672 10-12.377 10-18.998 0-6.618-4.333-12.204-11.886-12.204zM16.515 29.849c-0.035 0.035-0.086 0.074-0.131 0.107-0.046-0.032-0.096-0.072-0.133-0.107l-0.523-0.602c-4.106-4.71-9.729-11.161-9.729-17.055 0-5.532 4.632-10.205 10.114-10.205 6.829 0 9.886 5.125 9.886 10.205 0 4.474-3.192 10.416-9.485 17.657zM16.035 6.044c-3.313 0-6 2.686-6 6s2.687 6 6 6 6-2.687 6-6-2.686-6-6-6zM16.035 16.044c-2.206 0-4.046-1.838-4.046-4.044s1.794-4 4-4c2.207 0 4 1.794 4 4 0.001 2.206-1.747 4.044-3.954 4.044z"
+              ></path>
+            </g>
+          </svg>
+          <h2>14+</h2>
+          <p>States</p>
+        </div>
+
+        <div class="stat-item">
+          <svg
+            viewBox="0 0 48 48"
+            id="a"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#63b3ed"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <defs>
+                <style>
+                  .b {
+                    fill: none;
+                    stroke: #63b3ed;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                  }
+                </style>
+              </defs>
+              <g>
+                <line class="b" x1="12" y1="39" x2="36" y2="39"></line>
+                <rect
+                  class="b"
+                  x="4.5"
+                  y="9"
+                  width="39"
+                  height="26"
+                  rx="2"
+                  ry="2"
+                ></rect>
+              </g>
+              <polygon
+                class="b"
+                points="29.8597 22 20.1403 16.404 20.1403 27.596 29.8597 22"
+              ></polygon>
+            </g>
+          </svg>
+          <h2>1,760,181+</h2>
+          <p>YouTube Views</p>
+        </div>
+      </div>
+    </section>
+    <!-- Glimpses of Previous GLB-Hackathon -->
+    <section class="gallery">
+      <h2 class="styled-heading">Glimpses of Previous GLB-Hackathon</h2>
+      <div class="gallery-container">
+        <!-- first column -->
+        <div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- second column -->
+        <div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- third column -->
+        <div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- fourth column -->
+        <div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- fifth column -->
+        <div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- exevision -->
+    <section class="gallery">
+      <h2 class="styled-heading">Glimpses of Previous GLB-Hackathon</h2>
+      <div class="gallery-container">
+        <!-- first column -->
+        <div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- second column -->
+        <div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- third column -->
+        <div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- fourth column -->
+        <div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- fifth column -->
+        <div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./img/team/chairman.png" alt="Front Image" />
+              </div>
+              <div class="card-back">
+                <img src="./img/team/Director.png" alt="Back Image" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hackathon Themes -->
+    <section class="container-main" id="theme-page">
+      <div class="container">
+        <h2 class="title">HACKATHON THEMES</h2>
+        <div class="grid">
+          <div class="theme">
+            <img src="/img/team/chairman.png" alt="AI & Robotics" />
+            <div class="overlay"><span>AI & Robotics</span></div>
+          </div>
+          <div class="theme">
+            <img src="/img/team/chairman.png" alt="Green Technology" />
+            <div class="overlay"><span>Green Technology</span></div>
+          </div>
+          <div class="theme">
+            <img src="/img/team/chairman.png" alt="Virtual Reality" />
+            <div class="overlay"><span>Virtual Reality</span></div>
+          </div>
+          <div class="theme">
+            <img src="/img/team/chairman.png" alt="Innovation" />
+            <div class="overlay"><span>Innovation</span></div>
+          </div>
+          <div class="theme">
+            <img src="/img/team/chairman.png" alt="IoT" />
+            <div class="overlay"><span>IoT</span></div>
+          </div>
+          <div class="theme">
+            <img src="/img/team/chairman.png" alt="Healthcare" />
+            <div class="overlay"><span>Healthcare</span></div>
+          </div>
+          <div class="theme">
+            <img src="/img/team/chairman.png" alt="Industry 5.0" />
+            <div class="overlay"><span>Industry 5.0</span></div>
+          </div>
+          <div class="theme">
+            <img src="/img/team/chairman.png" alt="Web 3.0" />
+            <div class="overlay"><span>Web 3.0</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sponsors" id="sponsors-page">
+      <div class="container">
+        <h2 class="title">OUR SPONSORS</h2>
+
+        <div class="gold-sponsor">
+          <h3>GOLD SPONSOR</h3>
+          <div class="sponsor-card">
+            <img src="/img/sponsors/6.0/Devfolio.svg" alt="Devfolio" />
+          </div>
+        </div>
+
+        <div class="silver-sponsors">
+          <h3>SILVER SPONSOR</h3>
+          <div class="sponsor-row">
+            <div class="sponsor-card">
+              <img src="/img/sponsors/6.0/polygon.png" alt="Polygon" />
+            </div>
+            <div class="sponsor-card">
+              <img src="/img/sponsors/6.0/ethindia-dark.png" alt="ETHIndia" />
+            </div>
+          </div>
+        </div>
+
+        <p class="contact-text">CONTACT FOR SPONSORSHIP</p>
+      </div>
+    </section>
+    <!-- mentor -->
+    <section class="mentors">
+      <h2 class="title">Our Mentors</h2>
+      <div class="mentor-grid">
+        <div class="mentor chief-patron">
+          <img src="./img/team/Dr.RKAgarwal.png" alt="Dr. R.K. Agrawal" />
+          <h3>Dr. R.K. Agrawal</h3>
+          <p>Chief Patron</p>
+        </div>
+        <div class="mentor patron">
+          <img src="./img/team/chairman.png" alt="Mr. Pankaj Agrawal" />
+          <h3>Mr. Pankaj Agrawal</h3>
+          <p>Patron</p>
+        </div>
+        <div class="mentor co-patron">
+          <img src="./img/team/glbajajceo.png" alt="Mr. Kartikay Agrawal" />
+          <h3>Mr. Kartikay Agrawal</h3>
+          <p>Co-Patron</p>
+        </div>
+        <div class="mentor convener">
+          <img src="./img/team/Director.png" alt="Dr. Mukul Gupta" />
+          <h3>Dr. Mukul Gupta</h3>
+          <p>Convener</p>
+        </div>
+        <div class="mentor co-convener">
+          <img src="./img/team/Dean.png" alt="Dr. Deepa Gupta" />
+          <h3>Dr. Deepa Gupta</h3>
+          <p>Co-Convener</p>
+        </div>
+      </div>
+    </section>
+    <!-- faculity guides -->
+    <section class="faculty-guides">
+      <h2 class="title">Faculty Guides</h2>
+      <div class="faculty-grid">
+        <div class="faculty">
+          <img src="./img/second.png" alt="Dr. Madhumita" />
+          <h3>Dr. Madhumita</h3>
+          <p>Assistant Professor</p>
+          <p>GLBIM</p>
+        </div>
+        <div class="faculty">
+          <img src="./img/second.png" alt="Sujeet Kumar" />
+          <h3>Sujeet Kumar</h3>
+          <p>Assistant Professor</p>
+          <p>GLBIM</p>
+        </div>
+        <div class="faculty">
+          <img src="./img/second.png" alt="Renu Tomar" />
+          <h3>Renu Tomar</h3>
+          <p>Assistant Professor</p>
+          <p>GLBIM</p>
+        </div>
+        <div class="faculty">
+          <img src="./img/second.png" alt="Sachin Gupta" />
+          <h3>Sachin Gupta</h3>
+          <p>Assistant Professor</p>
+          <p>GLBIM</p>
+        </div>
+        <div class="faculty">
+          <img src="./img/second.png" alt="Dr. Madhumita" />
+          <h3>Dr. Madhumita</h3>
+          <p>Assistant Professor</p>
+          <p>GLBIM</p>
+        </div>
+        <div class="faculty">
+          <img src="./img/second.png" alt="Sujeet Kumar" />
+          <h3>Sujeet Kumar</h3>
+          <p>Assistant Professor</p>
+          <p>GLBIM</p>
+        </div>
+        <div class="faculty">
+          <img src="./img/second.png" alt="Renu Tomar" />
+          <h3>Renu Tomar</h3>
+          <p>Assistant Professor</p>
+          <p>GLBIM</p>
+        </div>
+        <div class="faculty">
+          <img src="./img/second.png" alt="Sachin Gupta" />
+          <h3>Sachin Gupta</h3>
+          <p>Assistant Professor</p>
+          <p>GLBIM</p>
+        </div>
+      </div>
+    </section>
+    <!-- student team -->
+    <section class="student-teams" id="team-page">
+      <h2 class="title">Student Teams</h2>
+      <div class="student-grid">
+        <div class="student">
+          <img src="./img/second.png" alt="Dr. Madhumita" />
+          <h3>Pranay</h3>
+          <p>BCA</p>
+          <p>GLBIM</p>
+        </div>
+        <div class="student">
+          <img src="./img/second.png" alt="Sujeet Kumar" />
+          <h3>Pranay</h3>
+          <p>BCA</p>
+          <p>GLBIM</p>
+        </div>
+      </div>
+    </section>
+    <section class="faq" id="faq-page">
+      <h2 class="title">Frequently Asked Questions</h2>
+      <div class="faq-item active">
+        <div class="question">What is GLB-Hackathon 4.0?</div>
+        <div class="answer">
+          GLB Hackathon 4.0 is a collaborative event where tech enthusiasts come
+          together to innovate, solve problems, and build groundbreaking
+          solutions. It's a platform to learn, network, and showcase your coding
+          skills in a vibrant and inspiring environment.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="question">
+          Is there a limit to the number of team members?
+        </div>
+        <div class="answer">Each team can have up to 5 members.</div>
+      </div>
+      <div class="faq-item">
+        <div class="question">
+          Are there any restrictions on who can participate?
+        </div>
+        <div class="answer">
+          Participants must be students or professionals in the tech industry.
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact-page">
+      <div class="contact-box">
+        <h2 class="contact-title">CONTACT US</h2>
+        <div class="contact-details">
+          <div class="contact-item">
+            <span class="icon">📞</span>
+            <p class="name">Sandeep Mishra</p>
+            <p class="phone">+91 9219239750</p>
+          </div>
+          <div class="contact-item">
+            <span class="icon">📧</span>
+            <p class="email">glb.hackathon@glbim.ac.in</p>
+          </div>
+          <div class="contact-item">
+            <span class="icon">📞</span>
+            <p class="name">Shashi Kumar</p>
+            <p class="phone">+91 7258061920</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <img src="./img/12a.png" class="footer-logo" />
+      <div class="footer-section">
+        <h1>Venue</h1>
+        <h3 class="venue-date">25 <sup>th</sup> April 2025</h3>
+        <p>
+          GL Bajaj Institute of Management, Knowledge Park III, Greater Noida -
+          201306, Distt. G. B. Nagar, U.P, India
+        </p>
+      </div>
+      <div class="footer-section">
+        <h1>Resources</h1>
+        <p>Code of Conduct</p>
+      </div>
+      <div class="footer-section">
+        <h1>Community</h1>
+        <div class="community">
+          <img
+            width="24"
+            height="24"
+            src="https://img.icons8.com/color/48/whatsapp--v1.png"
+            alt="WhatsApp Icon"
+          />
+          <p>Whatsapp</p>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h1>Social Connection</h1>
+        <div class="social-links">
+          <a href="#"><img src="./img/instagram.png" alt="Instagram" /></a>
+          <a href="#"><img src="./img/facebook.png" alt="facebook" /></a>
+          <a href="#"><img src="./img/linkdin.png" alt="LinkedIn" /></a>
+          <a href="#"><img src="./img/youtube.png" alt="YouTube" /></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Designed With ❤️ By GLB HACKATHON TEAM</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
