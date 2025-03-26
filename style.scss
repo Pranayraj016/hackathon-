@@ -56,6 +56,10 @@ body {
 
     #menu a {
       color: black;
+
+      @media (max-width: 768px) {
+        color: white !important;
+      }
     }
   }
 
@@ -1474,10 +1478,16 @@ body {
 .community {
   display: flex;
   gap: 10px;
-
-  img {
-    width: 24px;
-    height: 24px;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    img {
+      width: 24px;
+      height: 24px;
+    }
   }
 }
 

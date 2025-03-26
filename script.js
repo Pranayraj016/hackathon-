@@ -31,9 +31,21 @@ document.addEventListener("click", (e) => {
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
-    navbar.classList.add("scrolled"); // Add background and change text color
+    navbar.classList.add("scrolled");
+
+    // ✅ Ensure text stays white on mobile
+    if (window.innerWidth <= 768) {
+      document.querySelectorAll("#menu a").forEach((link) => {
+        link.style.color = "white";
+      });
+    }
   } else {
-    navbar.classList.remove("scrolled"); // Remove background and restore original colors
+    navbar.classList.remove("scrolled");
+
+    // ✅ Restore original colors when at top
+    document.querySelectorAll("#menu a").forEach((link) => {
+      link.style.color = ""; // Removes inline styles
+    });
   }
 });
 

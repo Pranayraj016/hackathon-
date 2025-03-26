@@ -53,6 +53,11 @@ body {
   color: black;
 }
 @media (max-width: 768px) {
+  .logo.scrolled #menu a {
+    color: white !important;
+  }
+}
+@media (max-width: 768px) {
   .logo img {
     width: 150px;
   }
@@ -1385,7 +1390,14 @@ body {
   display: flex;
   gap: 10px;
 }
-.community img {
+.community a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+.community a img {
   width: 24px;
   height: 24px;
 }
