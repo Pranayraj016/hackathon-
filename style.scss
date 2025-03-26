@@ -55,7 +55,7 @@ body {
     background: white;
 
     #menu a {
-      color: white;
+      color: black;
     }
   }
 
@@ -872,7 +872,7 @@ body {
 
   .chief-patron {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     background: #fff;
     padding: 1.5rem;
@@ -886,6 +886,7 @@ body {
       height: auto;
       max-width: 100%;
       border-radius: 10px;
+      margin-right: 20px;
     }
 
     &:hover {
@@ -898,7 +899,7 @@ body {
       color: white;
       padding: 20px;
       width: 100%;
-      max-width: 700px;
+      max-width: 1000px;
       border-radius: 10px;
       box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
       text-align: center;
@@ -906,8 +907,8 @@ body {
     }
 
     .quote-text {
-      font-size: 10px;
-      line-height: 1.6;
+      font-size: 18px;
+      line-height: 1.5;
       text-align: justify;
     }
 
@@ -915,40 +916,6 @@ body {
       margin-top: 15px;
       font-weight: 600;
       font-size: 18px;
-    }
-  }
-
-  .main-patron,
-  .converner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-
-    .patron,
-    .co-patron,
-    .convener,
-    .co-convener {
-      background: #fff;
-      max-width: 100%;
-      width: 45%;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-
-      &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-      }
-
-      img {
-        width: 100%;
-        height: auto;
-        max-width: 450px;
-        border-radius: 10px;
-      }
     }
   }
 
@@ -960,21 +927,7 @@ body {
 
     .chief-patron {
       flex-direction: column;
-      padding: 1rem;
       text-align: center;
-    }
-
-    .main-patron,
-    .converner {
-      flex-direction: column;
-      align-items: center;
-
-      .patron,
-      .co-patron,
-      .convener,
-      .co-convener {
-        width: 90%;
-      }
     }
   }
 
@@ -987,31 +940,148 @@ body {
     }
 
     .chief-patron {
-      padding: 1rem;
-    }
-
-    .quote-card {
-      padding: 15px;
-    }
-
-    .quote-text {
-      font-size: 14px;
-    }
-
-    .author {
-      font-size: 16px;
-    }
-
-    .main-patron,
-    .converner {
       flex-direction: column;
       align-items: center;
+      padding: 1rem;
 
-      .patron,
-      .co-patron,
-      .convener,
-      .co-convener {
+      img {
+        margin: 0 0 15px 0;
+        max-width: 80%;
+      }
+
+      .quote-card {
+        padding: 15px;
+        max-width: 90%;
+      }
+
+      .quote-text {
+        font-size: 14px;
+      }
+
+      .author {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .main-patron,
+  .converner {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    .patron,
+    .co-patron {
+      background: #fff;
+      max-width: 600px;
+      width: 45%;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      img {
         width: 100%;
+        height: auto;
+        max-width: 550px;
+        border-radius: 10px;
+      }
+    }
+    .convener,
+    .co-convener {
+      background: #fff;
+      max-width: 500px;
+      width: 45%;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        max-width: 550px;
+        border-radius: 10px;
+      }
+
+      // 📱 Responsive Design for Tablets
+      @media (max-width: 1024px) {
+        .title {
+          font-size: 32px;
+        }
+
+        .chief-patron {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .main-patron,
+        .converner {
+          flex-direction: column;
+          align-items: center;
+
+          .patron,
+          .co-patron,
+          .convener,
+          .co-convener {
+            width: 90%;
+          }
+        }
+      }
+
+      // 📱 Responsive Design for Mobile Devices
+      @media (max-width: 768px) {
+        padding: 1rem;
+
+        .title {
+          font-size: 28px;
+        }
+
+        .chief-patron {
+          flex-direction: column; // ✅ Fix: Stack elements in column layout
+          align-items: center;
+          padding: 1rem;
+        }
+
+        .quote-card {
+          padding: 15px;
+        }
+
+        .quote-text {
+          font-size: 14px;
+        }
+
+        .author {
+          font-size: 16px;
+        }
+
+        .main-patron,
+        .converner {
+          flex-direction: column;
+          align-items: center;
+
+          .patron,
+          .co-patron,
+          .convener,
+          .co-convener {
+            width: 100%;
+          }
+        }
       }
     }
   }

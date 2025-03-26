@@ -29,7 +29,6 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// Add background and change link color when scrolling
 window.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
     navbar.classList.add("scrolled"); // Add background and change text color
