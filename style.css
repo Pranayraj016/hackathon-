@@ -25,10 +25,9 @@ body {
   z-index: 1000;
 }
 .logo img {
-  width: 180px;
+  width: 250px;
   height: auto;
-  margin-bottom: -40px;
-  margin-top: -40px;
+  margin-bottom: -18px;
   transition: filter 0.3s ease-in-out;
 }
 .logo #menu {
@@ -112,16 +111,18 @@ body {
 
 .banner {
   position: relative;
-  background-image: url("./img/campus-facilities-sample.jpg");
+  background-image: url("./img/background.JPEG");
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70vh;
+  height: 95vh;
   text-align: center;
   color: white;
   padding: 20px;
+  /* Tablet and smaller screens */
+  /* Mobile screens */
 }
 .banner::after {
   content: "";
@@ -130,13 +131,68 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0);
   z-index: 1;
 }
 .banner .content {
   position: relative;
   z-index: 2;
   max-width: 90%;
+  margin: auto;
+  text-align: center;
+}
+.banner .logotext {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.banner .textlogoimg {
+  margin: auto;
+  margin-top: 10vh;
+  margin-bottom: -20vh;
+  width: 40%;
+  max-width: 250px;
+  height: auto;
+}
+.banner .text {
+  width: 2000px;
+  max-width: 1200px;
+  margin: auto;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  margin-bottom: -170px;
+}
+.banner .date {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+@media (max-width: 768px) {
+  .banner .textlogoimg {
+    margin-top: 8vh;
+    margin-bottom: -8vh;
+    width: 50%;
+  }
+  .banner .text {
+    width: 95%;
+    font-size: 1rem;
+  }
+  .banner .date {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .banner .textlogoimg {
+    width: 60%;
+    margin-top: 6vh;
+    margin-bottom: -6vh;
+  }
+  .banner .text {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  .banner .date {
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
 }
 .banner h1 {
   font-size: 48px;
@@ -153,7 +209,6 @@ body {
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
-  margin-top: 10px;
 }
 .banner .whatsapp-btn,
 .banner .registration-btn {
@@ -167,40 +222,56 @@ body {
   color: white;
   cursor: pointer;
   transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  text-align: center;
+  white-space: nowrap;
 }
 .banner .whatsapp-btn:hover,
 .banner .registration-btn:hover {
   transform: scale(1.05);
 }
 .banner .whatsapp-btn {
-  background: #25d366;
+  background: #25d366; /* WhatsApp green */
 }
 .banner .whatsapp-btn:hover {
   background: #21ba45;
 }
 .banner .registration-btn {
-  background: #007bff;
+  background: #007bff; /* Blue color */
 }
 .banner .registration-btn:hover {
   background: #0069d9;
 }
 @media (max-width: 768px) {
+  .banner .registion {
+    display: flex;
+  }
   .banner .whatsapp-btn,
   .banner .registration-btn {
     font-size: 14px;
     padding: 10px 20px;
+    width: 50px;
   }
 }
 @media (max-width: 480px) {
+  .banner .registion {
+    display: flex;
+    flex-direction: row;
+  }
   .banner .whatsapp-btn,
   .banner .registration-btn {
     width: 100%;
-    text-align: center;
+    display: block;
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 768px) {
   .banner {
     height: 60vh;
+  }
+  .banner .registion {
+    margin: auto;
+    display: flex;
+    width: 200px;
   }
   .banner h1 {
     font-size: 32px;
@@ -212,6 +283,10 @@ body {
 @media (max-width: 480px) {
   .banner {
     height: 70vh;
+  }
+  .banner .registion {
+    display: flex;
+    flex-direction: row;
   }
   .banner h1 {
     font-size: 28px;
@@ -240,7 +315,7 @@ body {
   transform: translateY(0);
 }
 .about h1 {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: bold;
   color: #63b3ed;
   text-transform: uppercase;
@@ -248,9 +323,10 @@ body {
   margin-bottom: 15px;
 }
 .about p {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.8;
-  max-width: 900px;
+  max-width: 100%;
+  margin-bottom: 15px;
 }
 .about .event-details {
   display: flex;
@@ -338,7 +414,7 @@ body {
   font-size: 2.5rem;
   font-weight: bold;
   font-family: serif;
-  color: #77b6f1;
+  color: black;
   position: relative;
   display: inline-block;
   background-color: transparent;
@@ -353,7 +429,7 @@ body {
   transform: translateX(-50%);
   width: 60px;
   height: 5px;
-  background-color: #77b6f1;
+  background-color: black;
 }
 .gallery .gallery-container {
   display: grid;
@@ -479,8 +555,8 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   margin-top: 20px;
   justify-content: center;
   align-items: center;
@@ -492,13 +568,15 @@ body {
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 200px;
+  max-width: 220px;
   opacity: 0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .theme img {
   width: 100%;
-  height: auto;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
   transition: filter 0.3s ease;
 }
@@ -538,12 +616,12 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .theme {
-    max-width: 180px;
+    max-width: 200px;
   }
   .title {
     font-size: 20px;
@@ -552,6 +630,14 @@ body {
   .overlay {
     font-size: 14px;
     padding: 8px;
+  }
+}
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .theme {
+    max-width: 100%;
   }
 }
 @keyframes fadeIn {
@@ -655,43 +741,159 @@ body {
 }
 
 .mentors {
-  background: #f5c24c;
+  background-color: #f5c24c;
   text-align: center;
   padding: 2rem;
 }
 .mentors .title {
-  color: #1e73be;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: relative;
 }
-.mentors .mentor-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-}
-.mentors .mentor {
+.mentors .chief-patron {
+  display: flex;
   background: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin-bottom: 15px;
+  padding-left: 100px;
 }
-.mentors .mentor img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+.mentors .chief-patron img {
+  height: 600px;
+  width: 600px;
+  border-radius: 10px;
 }
-.mentors .mentor h3 {
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
-  color: #333;
+.mentors .chief-patron:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-.mentors .mentor p {
-  font-size: 1rem;
-  color: #777;
+.mentors .chief-patron .quote-card {
+  margin: auto;
+  background-color: #7a4935;
+  color: white;
+  padding: 30px;
+  width: 800px;
+  height: 600px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.mentors .chief-patron .quote-text {
+  font-size: 17px;
+  line-height: 1.6;
+  text-align: justify;
+}
+.mentors .chief-patron .author {
+  margin-top: 50px;
+  font-weight: 600;
+  font-size: 18px;
+}
+.mentors .chief-patron .designation {
+  font-size: 18px;
+  opacity: 0.8;
+}
+.mentors .chief-patron .decorations {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.mentors .chief-patron .triangle {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid #f4b400;
+  margin: 5px;
+  display: inline-block;
+}
+.mentors .main-patron {
+  display: flex;
+  justify-content: center;
+}
+.mentors .main-patron .patron {
+  background: #fff;
+  width: 500px;
+  padding: 1rem;
+  padding-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  gap: 10px;
+  margin-right: 20px;
+}
+.mentors .main-patron .patron:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.mentors .main-patron .patron img {
+  width: 450px;
+}
+.mentors .main-patron .co-patron {
+  background: #fff;
+  width: 500px;
+  padding: 1rem;
+  padding-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  gap: 10px;
+}
+.mentors .main-patron .co-patron:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.mentors .main-patron .co-patron img {
+  width: 450px;
+}
+.mentors .converner {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.mentors .converner .convener {
+  background: #fff;
+  width: 450px;
+  padding: 1rem;
+  padding-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  gap: 10px;
+  margin-right: 20px;
+}
+.mentors .converner .convener:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.mentors .converner .convener img {
+  width: 400px;
+  border-radius: 10px;
+}
+.mentors .converner .co-convener {
+  background: #fff;
+  width: 450px;
+  padding: 1rem;
+  padding-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  gap: 10px;
+}
+.mentors .converner .co-convener:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.mentors .converner .co-convener img {
+  width: 400px;
+  border-radius: 10px;
 }
 
 .faculty-guides {
@@ -721,9 +923,11 @@ body {
   width: 250px;
 }
 .faculty-guides .faculty img {
-  width: 100%;
-  height: auto;
+  width: 220px;
+  height: 220px;
   border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .faculty-guides .faculty h3 {
   font-size: 1.2rem;
@@ -761,6 +965,7 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   width: 250px;
+  height: 350px;
 }
 .student-teams .student img {
   width: 100%;
@@ -898,7 +1103,7 @@ body {
   border-radius: 10px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
-  color: black;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
