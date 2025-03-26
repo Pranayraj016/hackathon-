@@ -50,7 +50,7 @@ body {
   background: white;
 }
 .logo.scrolled #menu a {
-  color: black;
+  color: white;
 }
 @media (max-width: 768px) {
   .logo img {
@@ -167,30 +167,35 @@ body {
 }
 @media (max-width: 768px) {
   .banner .textlogoimg {
-    margin-top: 8vh;
-    margin-bottom: -8vh;
-    width: 50%;
-  }
-  .banner .text {
-    width: 95%;
-    font-size: 1rem;
-  }
-  .banner .date {
-    font-size: 1.5rem;
-  }
-}
-@media (max-width: 480px) {
-  .banner .textlogoimg {
-    width: 60%;
+    width: 40%;
     margin-top: 6vh;
-    margin-bottom: -6vh;
+    margin-bottom: 0vh;
   }
   .banner .text {
     width: 100%;
     font-size: 0.9rem;
+    margin-top: -6vh;
+    margin-bottom: 0.5vh;
   }
   .banner .date {
-    margin-top: 20px;
+    margin-top: -5vh;
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .banner .textlogoimg {
+    width: 40%;
+    margin-top: 6vh;
+    margin-bottom: 0vh;
+  }
+  .banner .text {
+    width: 100%;
+    font-size: 0.9rem;
+    margin-top: -8vh;
+    margin-bottom: 1vh;
+  }
+  .banner .date {
+    margin-top: -5vh;
     font-size: 1.2rem;
   }
 }
@@ -208,7 +213,6 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  flex-wrap: wrap;
 }
 .banner .whatsapp-btn,
 .banner .registration-btn {
@@ -249,7 +253,6 @@ body {
   .banner .registration-btn {
     font-size: 14px;
     padding: 10px 20px;
-    width: 50px;
   }
 }
 @media (max-width: 480px) {
@@ -270,6 +273,7 @@ body {
   }
   .banner .registion {
     margin: auto;
+    flex-direction: row;
     display: flex;
     width: 200px;
   }
@@ -634,7 +638,7 @@ body {
 }
 @media (max-width: 480px) {
   .grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .theme {
     max-width: 100%;
@@ -746,13 +750,15 @@ body {
   padding: 2rem;
 }
 .mentors .title {
-  font-size: 42px;
+  font-size: 36px;
   font-weight: bold;
   margin-bottom: 20px;
   position: relative;
 }
 .mentors .chief-patron {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #fff;
   padding: 1.5rem;
   border-radius: 10px;
@@ -760,11 +766,10 @@ body {
   text-align: center;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   margin-bottom: 15px;
-  padding-left: 100px;
 }
 .mentors .chief-patron img {
-  height: 600px;
-  width: 600px;
+  height: auto;
+  max-width: 100%;
   border-radius: 10px;
 }
 .mentors .chief-patron:hover {
@@ -772,128 +777,133 @@ body {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 .mentors .chief-patron .quote-card {
-  margin: auto;
   background-color: #7a4935;
   color: white;
-  padding: 30px;
-  width: 800px;
-  height: 600px;
+  padding: 20px;
+  width: 100%;
+  max-width: 700px;
   border-radius: 10px;
-  position: relative;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-top: 20px;
 }
 .mentors .chief-patron .quote-text {
-  font-size: 17px;
+  font-size: 10px;
   line-height: 1.6;
   text-align: justify;
 }
 .mentors .chief-patron .author {
-  margin-top: 50px;
+  margin-top: 15px;
   font-weight: 600;
   font-size: 18px;
 }
-.mentors .chief-patron .designation {
-  font-size: 18px;
-  opacity: 0.8;
-}
-.mentors .chief-patron .decorations {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-}
-.mentors .chief-patron .triangle {
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 20px solid #f4b400;
-  margin: 5px;
-  display: inline-block;
-}
-.mentors .main-patron {
-  display: flex;
-  justify-content: center;
-}
-.mentors .main-patron .patron {
-  background: #fff;
-  width: 500px;
-  padding: 1rem;
-  padding-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  gap: 10px;
-  margin-right: 20px;
-}
-.mentors .main-patron .patron:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-.mentors .main-patron .patron img {
-  width: 450px;
-}
-.mentors .main-patron .co-patron {
-  background: #fff;
-  width: 500px;
-  padding: 1rem;
-  padding-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  gap: 10px;
-}
-.mentors .main-patron .co-patron:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-.mentors .main-patron .co-patron img {
-  width: 450px;
-}
+.mentors .main-patron,
 .mentors .converner {
-  margin-top: 20px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 15px;
 }
-.mentors .converner .convener {
-  background: #fff;
-  width: 450px;
-  padding: 1rem;
-  padding-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  gap: 10px;
-  margin-right: 20px;
-}
-.mentors .converner .convener:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-.mentors .converner .convener img {
-  width: 400px;
-  border-radius: 10px;
-}
+.mentors .main-patron .patron,
+.mentors .main-patron .co-patron,
+.mentors .main-patron .convener,
+.mentors .main-patron .co-convener,
+.mentors .converner .patron,
+.mentors .converner .co-patron,
+.mentors .converner .convener,
 .mentors .converner .co-convener {
   background: #fff;
-  width: 450px;
+  max-width: 100%;
+  width: 45%;
   padding: 1rem;
-  padding-top: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  gap: 10px;
 }
+.mentors .main-patron .patron:hover,
+.mentors .main-patron .co-patron:hover,
+.mentors .main-patron .convener:hover,
+.mentors .main-patron .co-convener:hover,
+.mentors .converner .patron:hover,
+.mentors .converner .co-patron:hover,
+.mentors .converner .convener:hover,
 .mentors .converner .co-convener:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+.mentors .main-patron .patron img,
+.mentors .main-patron .co-patron img,
+.mentors .main-patron .convener img,
+.mentors .main-patron .co-convener img,
+.mentors .converner .patron img,
+.mentors .converner .co-patron img,
+.mentors .converner .convener img,
 .mentors .converner .co-convener img {
-  width: 400px;
+  width: 100%;
+  height: auto;
+  max-width: 450px;
   border-radius: 10px;
+}
+@media (max-width: 1024px) {
+  .mentors .title {
+    font-size: 32px;
+  }
+  .mentors .chief-patron {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+  }
+  .mentors .main-patron,
+  .mentors .converner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .mentors .main-patron .patron,
+  .mentors .main-patron .co-patron,
+  .mentors .main-patron .convener,
+  .mentors .main-patron .co-convener,
+  .mentors .converner .patron,
+  .mentors .converner .co-patron,
+  .mentors .converner .convener,
+  .mentors .converner .co-convener {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .mentors {
+    padding: 1rem;
+  }
+  .mentors .title {
+    font-size: 28px;
+  }
+  .mentors .chief-patron {
+    padding: 1rem;
+  }
+  .mentors .quote-card {
+    padding: 15px;
+  }
+  .mentors .quote-text {
+    font-size: 14px;
+  }
+  .mentors .author {
+    font-size: 16px;
+  }
+  .mentors .main-patron,
+  .mentors .converner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .mentors .main-patron .patron,
+  .mentors .main-patron .co-patron,
+  .mentors .main-patron .convener,
+  .mentors .main-patron .co-convener,
+  .mentors .converner .patron,
+  .mentors .converner .co-patron,
+  .mentors .converner .convener,
+  .mentors .converner .co-convener {
+    width: 100%;
+  }
 }
 
 .faculty-guides {
@@ -969,8 +979,11 @@ body {
 }
 .student-teams .student img {
   width: 100%;
-  height: auto;
+  height: 220px;
   border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
 }
 .student-teams .student h3 {
   font-size: 1.2rem;

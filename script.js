@@ -1,25 +1,16 @@
-document.getElementById("about").addEventListener("click", function () {
-  document.getElementById("about-page").scrollIntoView({ behavior: "smooth" });
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("menu").addEventListener("click", function (event) {
+    const target = event.target.closest("a[data-scroll]");
+    if (target) {
+      event.preventDefault(); // Prevents default anchor link behavior
+      const section = document.getElementById(target.dataset.scroll);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  });
 });
-document.getElementById("theme").addEventListener("click", function () {
-  document.getElementById("theme-page").scrollIntoView({ behavior: "smooth" });
-});
-document.getElementById("sponsors").addEventListener("click", function () {
-  document
-    .getElementById("sponsors-page")
-    .scrollIntoView({ behavior: "smooth" });
-});
-document.getElementById("team").addEventListener("click", function () {
-  document.getElementById("team-page").scrollIntoView({ behavior: "smooth" });
-});
-document.getElementById("faq").addEventListener("click", function () {
-  document.getElementById("faq-page").scrollIntoView({ behavior: "smooth" });
-});
-document.getElementById("contact").addEventListener("click", function () {
-  document
-    .getElementById("contact-page")
-    .scrollIntoView({ behavior: "smooth" });
-});
+
 const menuToggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("menu");
 const navbar = document.querySelector(".logo");
