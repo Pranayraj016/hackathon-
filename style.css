@@ -1245,6 +1245,9 @@ body {
   font-size: 2rem;
   color: #889eb8;
 }
+.contact .contact-box .contact-item .icon img {
+  width: 40px;
+}
 .contact .contact-box .contact-item .name,
 .contact .contact-box .contact-item .phone,
 .contact .contact-box .contact-item .email {
