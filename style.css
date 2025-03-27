@@ -443,7 +443,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid transparent;
   transition: border-color 0.3s ease;
 }
 .gallery .card .card-front {
@@ -452,7 +451,6 @@ body {
 .gallery .card .card-back {
   transform: rotateY(180deg);
   background-color: #fafcfd;
-  border-color: #0b63f3;
 }
 .gallery .card img {
   width: 100%;

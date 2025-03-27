@@ -533,7 +533,6 @@ $breakpoint-xs: 400px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 2px solid transparent;
       transition: border-color 0.3s ease;
     }
 
@@ -544,7 +543,6 @@ $breakpoint-xs: 400px;
     .card-back {
       transform: rotateY(180deg);
       background-color: lighten($background-color, 3%);
-      border-color: darken($accent-color, 10%);
     }
 
     img {
