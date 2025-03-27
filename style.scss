@@ -174,18 +174,18 @@ body {
   .textlogoimg {
     margin: auto;
     margin-top: 10vh;
-    margin-bottom: -20vh;
+    margin-bottom: -10vh;
     width: 40%;
     max-width: 250px;
     height: auto;
   }
 
   .text {
-    width: 2000px;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 2000px;
     margin: auto;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    margin-bottom: -170px;
+    margin-bottom: -50px;
   }
 
   .date {
@@ -193,64 +193,79 @@ body {
     font-size: 2rem;
   }
 
+  /* Tablet and smaller screens */
   @media (max-width: 768px) {
     .textlogoimg {
-      width: 40%;
+      width: 50%;
       margin-top: 6vh;
-      margin-bottom: 0vh;
+      margin-bottom: 0;
     }
 
     .text {
-      width: 100%;
-      font-size: 0.9rem;
-      margin-top: -6vh;
-      margin-bottom: 0.5vh;
-    }
-
-    .date {
-      margin-top: -5vh;
-      font-size: 1.2rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .textlogoimg {
-      width: 40%;
-      margin-top: 6vh;
-      margin-bottom: 0vh;
-    }
-
-    .text {
-      width: 100%;
-      font-size: 0.9rem;
-      margin-top: -8vh;
+      font-size: 1rem;
       margin-bottom: 1vh;
     }
 
     .date {
-      margin-top: -5vh;
-      font-size: 1.2rem;
+      margin-top: -4vh;
+      font-size: 1.5rem;
+    }
+
+    .registion {
+      flex-direction: row;
+      width: auto;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 18px;
     }
   }
 
-  h1 {
-    font-size: 48px;
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  /* Mobile screens */
+  @media (max-width: 480px) {
+    .textlogoimg {
+      width: 60%;
+      margin-top: 4vh;
+      margin-bottom: 0;
+    }
+
+    .text {
+      font-size: 0.9rem;
+      margin-bottom: 2vh;
+    }
+
+    .date {
+      font-size: 1.2rem;
+      margin-top: -2vh;
+    }
+
+    .registion {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .whatsapp-btn,
+    .registration-btn {
+      width: 100%;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 16px;
+    }
   }
 
-  p {
-    font-size: 22px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  }
-  .registion {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    // flex-wrap: wrap;
-  }
-
+  /* Buttons */
   .whatsapp-btn,
   .registration-btn {
     display: inline-block;
@@ -273,7 +288,7 @@ body {
   }
 
   .whatsapp-btn {
-    background: #25d366; /* WhatsApp green */
+    background: #25d366;
   }
 
   .whatsapp-btn:hover {
@@ -281,68 +296,11 @@ body {
   }
 
   .registration-btn {
-    background: #007bff; /* Blue color */
+    background: #007bff;
   }
 
   .registration-btn:hover {
     background: #0069d9;
-  }
-
-  /* Tablet and smaller screens */
-  @media (max-width: 768px) {
-    .registion {
-      display: flex;
-    }
-    .whatsapp-btn,
-    .registration-btn {
-      font-size: 14px;
-      padding: 10px 20px;
-    }
-  }
-
-  /* Mobile screens */
-  @media (max-width: 480px) {
-    .registion {
-      display: flex;
-      flex-direction: row;
-    }
-    .whatsapp-btn,
-    .registration-btn {
-      width: 100%;
-      display: block;
-      margin-bottom: 10px;
-    }
-  }
-
-  // Mobile Banner
-  @media (max-width: 768px) {
-    .registion {
-      margin: auto;
-      flex-direction: row;
-      display: flex;
-      width: 200px;
-    }
-    height: 60vh;
-    h1 {
-      font-size: 32px;
-    }
-    p {
-      font-size: 18px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .registion {
-      display: flex;
-      flex-direction: row;
-    }
-    height: 70vh;
-    h1 {
-      font-size: 28px;
-    }
-    p {
-      font-size: 16px;
-    }
   }
 }
 // About

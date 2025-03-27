@@ -128,6 +128,7 @@ body {
   padding: 20px;
   /* Tablet and smaller screens */
   /* Mobile screens */
+  /* Buttons */
 }
 .banner::after {
   content: "";
@@ -154,17 +155,17 @@ body {
 .banner .textlogoimg {
   margin: auto;
   margin-top: 10vh;
-  margin-bottom: -20vh;
+  margin-bottom: -10vh;
   width: 40%;
   max-width: 250px;
   height: auto;
 }
 .banner .text {
-  width: 2000px;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 2000px;
   margin: auto;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  margin-bottom: -170px;
+  margin-bottom: -50px;
 }
 .banner .date {
   margin-bottom: 30px;
@@ -172,52 +173,60 @@ body {
 }
 @media (max-width: 768px) {
   .banner .textlogoimg {
-    width: 40%;
+    width: 50%;
     margin-top: 6vh;
-    margin-bottom: 0vh;
+    margin-bottom: 0;
   }
   .banner .text {
-    width: 100%;
-    font-size: 0.9rem;
-    margin-top: -6vh;
-    margin-bottom: 0.5vh;
+    font-size: 1rem;
+    margin-bottom: 1vh;
   }
   .banner .date {
-    margin-top: -5vh;
-    font-size: 1.2rem;
+    margin-top: -4vh;
+    font-size: 1.5rem;
+  }
+  .banner .registion {
+    flex-direction: row;
+    width: auto;
+    margin: auto;
+  }
+  .banner h1 {
+    font-size: 32px;
+  }
+  .banner p {
+    font-size: 18px;
   }
 }
 @media (max-width: 480px) {
   .banner .textlogoimg {
-    width: 40%;
-    margin-top: 6vh;
-    margin-bottom: 0vh;
+    width: 60%;
+    margin-top: 4vh;
+    margin-bottom: 0;
   }
   .banner .text {
-    width: 100%;
     font-size: 0.9rem;
-    margin-top: -8vh;
-    margin-bottom: 1vh;
+    margin-bottom: 2vh;
   }
   .banner .date {
-    margin-top: -5vh;
     font-size: 1.2rem;
+    margin-top: -2vh;
   }
-}
-.banner h1 {
-  font-size: 48px;
-  margin-bottom: 15px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-}
-.banner p {
-  font-size: 22px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-.banner .registion {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+  .banner .registion {
+    flex-direction: column;
+    width: 100%;
+  }
+  .banner .whatsapp-btn,
+  .banner .registration-btn {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .banner h1 {
+    font-size: 28px;
+  }
+  .banner p {
+    font-size: 16px;
+  }
 }
 .banner .whatsapp-btn,
 .banner .registration-btn {
@@ -239,70 +248,16 @@ body {
   transform: scale(1.05);
 }
 .banner .whatsapp-btn {
-  background: #25d366; /* WhatsApp green */
+  background: #25d366;
 }
 .banner .whatsapp-btn:hover {
   background: #21ba45;
 }
 .banner .registration-btn {
-  background: #007bff; /* Blue color */
+  background: #007bff;
 }
 .banner .registration-btn:hover {
   background: #0069d9;
-}
-@media (max-width: 768px) {
-  .banner .registion {
-    display: flex;
-  }
-  .banner .whatsapp-btn,
-  .banner .registration-btn {
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-}
-@media (max-width: 480px) {
-  .banner .registion {
-    display: flex;
-    flex-direction: row;
-  }
-  .banner .whatsapp-btn,
-  .banner .registration-btn {
-    width: 100%;
-    display: block;
-    margin-bottom: 10px;
-  }
-}
-@media (max-width: 768px) {
-  .banner {
-    height: 60vh;
-  }
-  .banner .registion {
-    margin: auto;
-    flex-direction: row;
-    display: flex;
-    width: 200px;
-  }
-  .banner h1 {
-    font-size: 32px;
-  }
-  .banner p {
-    font-size: 18px;
-  }
-}
-@media (max-width: 480px) {
-  .banner {
-    height: 70vh;
-  }
-  .banner .registion {
-    display: flex;
-    flex-direction: row;
-  }
-  .banner h1 {
-    font-size: 28px;
-  }
-  .banner p {
-    font-size: 16px;
-  }
 }
 
 .about {
