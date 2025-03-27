@@ -135,13 +135,13 @@ body {
 // Banner Section
 .banner {
   position: relative;
-  background-image: url("./img/background.JPEG");
+  background-image: url("./img/background.jpeg"); // Fixed file extension capitalization
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 95vh;
+  height: 100vh;
   text-align: center;
   color: white;
   padding: 20px;
@@ -149,19 +149,17 @@ body {
   &::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0);
+    inset: 0; // More concise way to set top/right/bottom/left to 0
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
   }
 
   .content {
     position: relative;
     z-index: 2;
-    max-width: 90%;
-    margin: auto;
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto; // More standard centering
     text-align: center;
   }
 
@@ -169,107 +167,110 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
   }
 
   .textlogoimg {
-    margin: auto;
-    margin-top: 10vh;
-    margin-bottom: -10vh;
-    width: 40%;
-    max-width: 250px;
+    margin-top: 5vh;
+    width: clamp(200px, 20vw, 300px);
     height: auto;
+    margin-bottom: -50px;
   }
 
   .text {
-    width: 100%;
-    max-width: 2100px;
-    margin: auto;
+    width: 100%; // Full width within content
+    max-width: 600px;
+    margin: 0 auto; // Center the text
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     margin-bottom: -50px;
   }
 
   .date {
-    margin-bottom: 30px;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    margin-top: 20px;
   }
 
-  /* Tablet and smaller screens */
-  @media (max-width: 768px) {
+  .registion {
+    // Note: likely a typo, should be "registration"
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  // Consolidated media queries with more consistent approach
+  @media (min-width: 1024px) {
+    .content {
+      max-width: 60%;
+    }
+
     .textlogoimg {
-      width: 50%;
-      margin-top: 6vh;
-      margin-bottom: 0;
+      width: 250px;
     }
 
     .text {
-      font-size: 1rem;
-      margin-bottom: 1vh;
+      font-size: 1.8rem;
+      max-width: 800px;
     }
 
     .date {
-      margin-top: -4vh;
-      font-size: 1.5rem;
+      font-size: 2.5rem;
     }
 
     .registion {
       flex-direction: row;
-      width: auto;
-      margin: auto;
-    }
-
-    h1 {
-      font-size: 32px;
-    }
-
-    p {
-      font-size: 18px;
+      gap: 20px;
     }
   }
 
-  /* Mobile screens */
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     .textlogoimg {
-      width: 60%;
-      margin-top: 4vh;
-      margin-bottom: 0;
+      width: 50%;
+      margin-top: 6vh;
     }
 
     .text {
-      font-size: 0.9rem;
-      margin-bottom: 2vh;
+      font-size: 1.2rem;
+      max-width: 500px;
     }
 
     .date {
-      font-size: 1.2rem;
-      margin-top: -2vh;
+      font-size: 1.5rem;
     }
 
     .registion {
       flex-direction: column;
-      width: 100%;
-    }
-
-    .whatsapp-btn,
-    .registration-btn {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: 28px;
-    }
-
-    p {
-      font-size: 16px;
     }
   }
 
-  /* Buttons */
-  .whatsapp-btn,
-  .registration-btn {
-    display: inline-block;
-    padding: 12px 24px;
+  @media (max-width: 480px) {
+    .textlogoimg {
+      width: 60%;
+      margin-top: -5vh;
+    }
+
+    .text {
+      font-size: 1rem;
+      max-width: 350px;
+    }
+
+    .date {
+      font-size: 1.2rem;
+    }
+
+    .registion {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  // Consolidated button styles
+  %button-base {
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -277,33 +278,36 @@ body {
     text-decoration: none;
     color: white;
     cursor: pointer;
-    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
     text-align: center;
     white-space: nowrap;
-    margin-right: 20px;
-  }
+    width: 100%;
+    max-width: 250px;
 
-  .whatsapp-btn:hover,
-  .registration-btn:hover {
-    transform: scale(1.05);
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
   .whatsapp-btn {
+    @extend %button-base;
     background: #25d366;
-  }
 
-  .whatsapp-btn:hover {
-    background: #21ba45;
+    &:hover {
+      background: #21ba45;
+    }
   }
 
   .registration-btn {
+    @extend %button-base;
     background: #007bff;
-  }
 
-  .registration-btn:hover {
-    background: #0069d9;
+    &:hover {
+      background: #0069d9;
+    }
   }
 }
+
 // About
 .about {
   background-color: #4c2c0c;
