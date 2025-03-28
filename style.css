@@ -1048,7 +1048,7 @@ body {
   width: 220px;
   height: 280px;
   border-radius: 8px;
-  display: block; /* Removes extra space under images */
+  display: block;
   max-width: 100%;
   max-height: 100%;
 }
