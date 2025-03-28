@@ -175,11 +175,6 @@ body {
   gap: 15px;
   margin-top: 20px;
 }
-.banner .registration-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .banner .registration-btn img {
   width: 20px;
   height: auto;
