@@ -444,30 +444,15 @@ body {
 }
 //Glimpses of Previous GLB-Hackathon
 // Color Palette
-$background-color: #f0f4f8;
-$card-background: #ffffff;
-$accent-color: #3b82f6;
-$text-color: #1f2937;
-$shadow-color: rgba(0, 0, 0, 0.1);
-
-// Breakpoints
-$breakpoint-xl: 1400px;
-$breakpoint-lg: 1200px;
-$breakpoint-md: 900px;
-$breakpoint-sm: 600px;
-$breakpoint-xs: 400px;
-
 .gallery {
   background-color: #f5c24c;
   padding: 4rem 1.25rem;
   text-align: center;
 
-  // Heading Styling with Advanced Typography
   .styled-heading {
     font-size: 2.75rem;
     font-weight: 700;
     font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    // color: $text-color;
     position: relative;
     display: inline-block;
     margin-bottom: 2.5rem;
@@ -478,24 +463,11 @@ $breakpoint-xs: 400px;
     color: transparent;
     transition: all 0.3s ease;
 
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   bottom: -0.625rem;
-    //   left: 50%;
-    //   transform: translateX(-50%);
-    //   width: 4rem;
-    //   height: 0.25rem;
-    //   background: linear-gradient(90deg, $accent-color 0%, transparent 100%);
-    //   border-radius: 0.25rem;
-    // }
-
     &:hover {
       transform: scale(1.02);
     }
   }
 
-  // Advanced Gallery Container
   .gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -507,7 +479,6 @@ $breakpoint-xs: 400px;
     padding: 0 1rem;
   }
 
-  // Enhanced Card Styling
   .card {
     width: 100%;
     max-width: 280px;
@@ -517,7 +488,6 @@ $breakpoint-xs: 400px;
     cursor: pointer;
     margin-bottom: 10px;
 
-    // Hover and Interaction Effects
     &:hover {
       .card-inner {
         transform: rotateY(180deg);
@@ -551,6 +521,7 @@ $breakpoint-xs: 400px;
 
     .card-front {
       z-index: 2;
+      background-color: $card-background;
     }
 
     .card-back {
@@ -561,9 +532,12 @@ $breakpoint-xs: 400px;
     img {
       width: 100%;
       height: 100%;
+      min-height: 100%;
       object-fit: cover;
       border-radius: 1rem;
       transition: transform 0.3s ease;
+      display: block;
+      max-width: 100%;
 
       &:hover {
         transform: scale(1.05);
@@ -571,7 +545,6 @@ $breakpoint-xs: 400px;
     }
   }
 
-  // Responsive Breakpoints with Enhanced Adaptability
   @media screen and (max-width: $breakpoint-lg) {
     .gallery-container {
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
