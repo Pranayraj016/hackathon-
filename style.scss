@@ -467,28 +467,28 @@ $breakpoint-xs: 400px;
     font-size: 2.75rem;
     font-weight: 700;
     font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: $text-color;
+    // color: $text-color;
     position: relative;
     display: inline-block;
     margin-bottom: 2.5rem;
     letter-spacing: -0.025em;
-    background: linear-gradient(to right, $text-color 50%, $accent-color 50%);
+    background: linear-gradient(to right, $text-color 50%, $text-color 50%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     transition: all 0.3s ease;
 
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: -0.625rem;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 4rem;
-      height: 0.25rem;
-      background: linear-gradient(90deg, $accent-color 0%, transparent 100%);
-      border-radius: 0.25rem;
-    }
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   bottom: -0.625rem;
+    //   left: 50%;
+    //   transform: translateX(-50%);
+    //   width: 4rem;
+    //   height: 0.25rem;
+    //   background: linear-gradient(90deg, $accent-color 0%, transparent 100%);
+    //   border-radius: 0.25rem;
+    // }
 
     &:hover {
       transform: scale(1.02);
@@ -1461,27 +1461,40 @@ $breakpoint-xs: 400px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 60px 20px;
   position: relative;
 }
+.footer-sections-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 50px;
+}
 
 .footer-logo {
-  width: 270px;
+  width: 220px;
   height: auto;
   margin-bottom: 20px;
 }
 
 .footer-section {
-  flex: 1;
-  min-width: 250px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  min-width: 300px;
   padding: 20px;
+  text-align: center;
 
   h1 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 10px;
+    text-align: center;
+  }
+  p {
+    text-align: start;
   }
 }
 
