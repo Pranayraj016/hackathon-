@@ -1309,6 +1309,10 @@ body {
   text-align: center;
   max-width: 300px;
 }
+.footer-section a {
+  text-decoration: none;
+  color: white;
+}
 
 .venue-date {
   color: #00bfff;
