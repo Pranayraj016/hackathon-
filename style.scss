@@ -1424,111 +1424,137 @@ body {
   }
 }
 
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Footer+++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
+/* +++++++++++++++++++++++++++++++++++++++++++++++++Footer+++++++++++++++++++++++++++++++++++++++++++++++++++ */
 .footer {
   background: url("../img/footer-bg.jpg") no-repeat center;
   background-size: cover;
   color: white;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column; /* Ensures stacking */
+  align-items: center;
   padding: 60px 20px;
   position: relative;
-}
-.footer-sections-container {
-  display: flex;
-  justify-content: center;
   width: 100%;
-  gap: 50px;
-}
 
-.footer-logo {
-  width: 220px;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-.footer-section {
-  display: flex;
-  align-items: start;
-  flex-direction: column;
-  min-width: 300px;
-  padding: 20px;
-  text-align: center;
-
-  h1 {
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  p {
-    text-align: start;
-  }
-}
-
-.venue-date {
-  color: #00bfff;
-  font-weight: bold;
-}
-
-.community {
-  display: flex;
-  gap: 10px;
-  a {
+  .footer-sections-container {
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
     justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-    img {
-      width: 24px;
-      height: 24px;
-    }
-  }
-}
-
-.social-links {
-  display: flex;
-  gap: 15px;
-  margin-top: 10px;
-
-  a {
-    img {
-      width: 30px;
-      height: 30px;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    &:hover img {
-      transform: scale(1.1);
-    }
-  }
-}
-
-.footer-bottom {
-  width: 100%;
-  text-align: center;
-  padding-top: 20px;
-  border-top: 1px solid #333;
-  font-size: 14px;
-  margin-top: 20px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .footer {
-    flex-direction: column;
-  }
-
-  .footer-section {
-    padding: 10px;
+    align-items: center; /* Ensure everything is centered */
+    width: 100%;
+    gap: 50px;
   }
 
   .footer-logo {
-    width: 120px;
+    width: 220px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content */
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+    text-align: center;
+
+    h1 {
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: center; /* Ensure text is centered */
+    }
+  }
+
+  .venue-date {
+    color: #00bfff;
+    font-weight: bold;
+  }
+
+  .community {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+
+    a {
+      img {
+        width: 30px;
+        height: 30px;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      &:hover img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .footer-bottom {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  /* ✅ Fixed Mobile View */
+  @media (max-width: 768px) {
+    .footer-sections-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .footer-section {
+      width: 100%;
+      max-width: 100%;
+      padding: 15px;
+    }
+
+    .footer-logo {
+      width: 120px;
+    }
+
+    .social-links {
+      gap: 10px;
+    }
+
+    .social-links a img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .footer-bottom {
+      font-size: 12px;
+    }
   }
 }

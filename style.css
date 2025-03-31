@@ -231,7 +231,8 @@ body {
     align-items: center;
   }
 }
-.banner .registration-btn, .banner .whatsapp-btn {
+.banner .registration-btn,
+.banner .whatsapp-btn {
   padding: 12px 20px;
   border: none;
   border-radius: 5px;
@@ -246,7 +247,8 @@ body {
   width: 100%;
   max-width: 250px;
 }
-.banner .registration-btn:hover, .banner .whatsapp-btn:hover {
+.banner .registration-btn:hover,
+.banner .whatsapp-btn:hover {
   transform: scale(1.05);
 }
 .banner .whatsapp-btn {
@@ -445,7 +447,7 @@ body {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 1rem;
   transition: transform 0.3s ease;
 }
@@ -543,7 +545,7 @@ body {
   width: 100%;
   height: 180px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
   transition: filter 0.3s ease;
 }
@@ -1087,7 +1089,7 @@ body {
   height: 220px;
   border-radius: 8px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
 }
 .student-teams .student h3 {
@@ -1318,18 +1320,20 @@ body {
   background-size: cover;
   color: white;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   padding: 60px 20px;
   position: relative;
+  text-align: center;
 }
 
 .footer-sections-container {
   display: flex;
+  /* flex-wrap: wrap; */
   justify-content: center;
   width: 100%;
   gap: 50px;
+  max-width: 1200px;
 }
 
 .footer-logo {
@@ -1340,21 +1344,22 @@ body {
 
 .footer-section {
   display: flex;
-  align-items: start;
   flex-direction: column;
-  min-width: 300px;
+  align-items: center;
+  min-width: 250px;
   padding: 20px;
-  text-align: center;
 }
+
 .footer-section h1 {
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 10px;
-  text-align: center;
 }
+
 .footer-section p {
-  text-align: start;
+  text-align: center;
+  max-width: 300px;
 }
 
 .venue-date {
@@ -1365,17 +1370,20 @@ body {
 .community {
   display: flex;
   gap: 10px;
+  align-items: center;
 }
+
 .community a {
   display: flex;
-  justify-content: center;
   align-items: center;
   text-decoration: none;
   color: white;
 }
-.community a img {
+
+.community img {
   width: 24px;
   height: 24px;
+  margin-right: 5px;
 }
 
 .social-links {
@@ -1383,11 +1391,13 @@ body {
   gap: 15px;
   margin-top: 10px;
 }
+
 .social-links a img {
   width: 30px;
   height: 30px;
   transition: transform 0.3s ease-in-out;
 }
+
 .social-links a:hover img {
   transform: scale(1.1);
 }
@@ -1401,15 +1411,20 @@ body {
   margin-top: 20px;
 }
 
-/* Responsive Design */
+/* 📌 Mobile-Friendly Adjustments */
 @media (max-width: 768px) {
-  .footer {
+  .footer-sections-container {
     flex-direction: column;
+    align-items: center;
+    gap: 30px;
   }
+
   .footer-section {
+    min-width: 100%;
     padding: 10px;
   }
+
   .footer-logo {
-    width: 120px;
+    width: 150px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
