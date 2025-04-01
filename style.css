@@ -8,7 +8,6 @@ html,
 body {
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
 }
 
 .logo {
@@ -1271,25 +1270,25 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px 40px;
+  padding: 60px 20px;
   position: relative;
   text-align: center;
   width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
+  padding-left: 250px;
+  padding-right: 250px;
 }
 
+/* 🔹 Main Footer Sections */
 .footer-sections-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   width: 90%;
   max-width: 1200px;
-  flex-wrap: wrap;
 }
 
 .footer-logo {
-  width: 200px;
+  width: 220px;
   height: auto;
   margin-bottom: 20px;
 }
@@ -1298,8 +1297,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  max-width: 350px;
+  min-width: 200px;
+  max-width: 400px;
   padding: 20px;
   text-align: center;
 }
@@ -1313,7 +1312,7 @@ body {
 
 .footer-section p {
   text-align: center;
-  max-width: 100%;
+  max-width: 300px;
 }
 
 .footer-section a {
@@ -1326,12 +1325,11 @@ body {
   font-weight: bold;
 }
 
+/* 🔹 Community & Social Links */
 .community {
   display: flex;
   gap: 10px;
   align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .community a {
@@ -1351,8 +1349,6 @@ body {
   display: flex;
   gap: 15px;
   margin-top: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .social-links a img {
@@ -1365,6 +1361,7 @@ body {
   transform: scale(1.1);
 }
 
+/* 🔹 Footer Bottom */
 .footer-bottom {
   width: 100%;
   text-align: center;
@@ -1374,51 +1371,42 @@ body {
   margin-top: 20px;
 }
 
-/* ✅ Large Screens */
-@media (min-width: 1200px) {
-  .footer {
-    padding: 100px 50px;
-  }
-}
-
-/* ✅ Tablets & Medium Screens */
+/* 🔹 Tablets & Smaller Screens */
 @media (max-width: 1024px) {
   .footer {
-    padding: 80px 30px;
+    padding: 50px 15px;
   }
+
   .footer-sections-container {
-    flex-wrap: wrap;
-    gap: 15px;
+    gap: 30px;
   }
+
   .footer-section {
-    max-width: 320px;
+    min-width: 220px;
     padding: 15px;
   }
+
   .footer-logo {
     width: 180px;
   }
 }
 
-/* ✅ Mobile-Friendly Adjustments */
+/* 🔹 Mobile-Friendly Adjustments */
 @media (max-width: 768px) {
-  .footer {
-    padding: 50px 20px;
-  }
-
   .footer-sections-container {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    width: 100%;
   }
 
   .footer-section {
-    max-width: 100%;
-    padding: 15px 10px;
+    min-width: 100%;
+    max-width: 90%;
+    padding: 10px;
   }
 
   .footer-logo {
-    width: 160px;
+    width: 150px;
   }
 
   .social-links {
@@ -1432,19 +1420,13 @@ body {
 
   .footer-bottom {
     font-size: 12px;
-    padding-top: 15px;
-  }
-
-  .community {
-    flex-direction: column;
-    gap: 8px;
   }
 }
 
-/* ✅ Small Mobile Screens */
+/* 🔹 Small Mobile Screens */
 @media (max-width: 480px) {
   .footer {
-    padding: 40px 15px;
+    padding: 40px 10px;
   }
 
   .footer-logo {
@@ -1457,7 +1439,7 @@ body {
 
   .footer-section p {
     font-size: 14px;
-    max-width: 100%;
+    max-width: 250px;
   }
 
   .social-links {
@@ -1471,6 +1453,5 @@ body {
 
   .footer-bottom {
     font-size: 11px;
-    padding-top: 12px;
   }
 }
