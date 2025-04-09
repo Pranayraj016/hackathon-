@@ -735,6 +735,10 @@ body {
   text-align: center;
   font-family: Arial, sans-serif;
 }
+.main-sponsors img {
+  height: 150px;
+  margin-bottom: 10px;
+}
 .sponsors .title {
   color: #cfdaf3;
   font-size: 24px;
