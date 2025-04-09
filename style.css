@@ -794,18 +794,22 @@ body {
   cursor: pointer;
   top: 20px;
 }
+
 .sponsors .contact-text::after {
   content: "";
   position: absolute;
   left: 0;
+  bottom: -3px; /* This makes the underline appear below the text */
   width: 0;
   height: 3px;
   background-color: #0069d9;
   transition: width 0.4s ease-in-out;
 }
+
 .sponsors .contact-text:hover::after {
   width: 100%;
 }
+
 @media (max-width: 768px) {
   .sponsors .silver-sponsors .sponsor-row {
     flex-direction: column;
