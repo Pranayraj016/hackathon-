@@ -739,6 +739,19 @@ body {
   height: 150px;
   margin-bottom: 10px;
 }
+@media (max-width: 768px) {
+  .main-sponsors img {
+    height: 100px;
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 480px) {
+  .main-sponsors img {
+    height: 80px;
+    margin-bottom: 6px;
+  }
+}
+
 .sponsors .title {
   color: #cfdaf3;
   font-size: 24px;
