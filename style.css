@@ -216,9 +216,8 @@ body {
 .banner .whatsapp-btn:hover {
   background-color: #21ba45;
 }
-.banner
 
-/* Media Queries */
+/* Media Queries - Largest screens */
 @media (min-width: 1200px) {
   .banner .content {
     max-width: 900px;
@@ -226,7 +225,6 @@ body {
 
   .banner .textlogoimg {
     width: 300px;
-    margin-bottom: -100px;
   }
 
   .banner button {
@@ -235,6 +233,7 @@ body {
   }
 }
 
+/* Medium screens */
 @media (max-width: 768px) {
   .banner {
     padding: 30px 15px;
@@ -266,9 +265,11 @@ body {
   }
 }
 
+/* Small screens */
 @media (max-width: 576px) {
   .banner {
     padding: 25px 10px;
+    min-height: 90vh; /* Adjust for smaller screens */
   }
 
   .banner .content {
@@ -281,35 +282,39 @@ body {
 
   .banner .text {
     max-width: 95%;
-    margin-bottom: -50px;
   }
 
   .banner .date {
     font-size: clamp(1.2rem, 5vw, 1.5rem);
     margin: 12px 0;
-    margin-bottom: -50px;
   }
 
   .banner .registration {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    margin-top: 20px;
   }
 
   .banner .btn-link {
     display: block;
-    width: auto;
+    width: 100%;
+    max-width: 250px;
   }
 
   .banner button {
     padding: 12px 15px;
     font-size: 14px;
-    min-width: 200px;
-    max-width: 100%;
+    width: 100%;
   }
 }
 
+/* Extra small screens */
 @media (max-width: 350px) {
+  .banner {
+    min-height: 85vh;
+  }
+
   .banner .textlogoimg {
     width: 100px;
   }
@@ -321,11 +326,10 @@ body {
   .banner button {
     padding: 10px 12px;
     font-size: 13px;
-    min-width: 170px;
   }
 }
 
-/* Fix for landscape mode on mobile */
+/* Landscape mode on mobile */
 @media (max-height: 500px) and (orientation: landscape) {
   .banner {
     min-height: 120vh;
@@ -333,7 +337,7 @@ body {
   }
 
   .banner .content {
-    margin: 60px auto;
+    margin: 20px auto;
   }
 
   .banner .textlogoimg {
@@ -349,19 +353,16 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+    margin-top: 15px;
+  }
+
+  .banner .btn-link {
+    width: auto;
   }
 
   .banner button {
     min-width: auto;
     padding: 10px 15px;
-  }
-
-  .banner .whatsapp-btn {
-    min-width: 100px;
-  }
-
-  .banner .registration-btn {
-    min-width: 150px;
   }
 }
 .about {
