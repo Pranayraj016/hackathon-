@@ -1,102 +1,146 @@
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("menu").addEventListener("click", function (event) {
+  initScrollNavigation();
+  initMobileMenu();
+  initFAQAccordion();
+  initScrollAnimations();
+  initThemeAnimations();
+});
+
+function initScrollNavigation() {
+  const menu = document.getElementById("menu");
+  if (!menu) return;
+
+  menu.addEventListener("click", function (event) {
     const target = event.target.closest("a[data-scroll]");
     if (target) {
-      event.preventDefault(); // Prevents default anchor link behavior
-      const section = document.getElementById(target.dataset.scroll);
+      event.preventDefault();
+      const sectionId = target.dataset.scroll;
+      const section = document.getElementById(sectionId);
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });
+
+        if (window.innerWidth <= 768) {
+          const menuToggle = document.getElementById("menu-toggle");
+          if (menu.classList.contains("active") && menuToggle) {
+            menu.classList.remove("active");
+            menuToggle.classList.remove("active");
+          }
+        }
       }
     }
   });
-});
+}
 
-const menuToggle = document.getElementById("menu-toggle");
-const menu = document.getElementById("menu");
-const navbar = document.querySelector(".logo");
+function initMobileMenu() {
+  const menuToggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
 
-// Toggle menu on click
-menuToggle.addEventListener("click", () => {
-  menu.classList.toggle("active");
-  menuToggle.classList.toggle("active");
-});
+  if (!menuToggle || !menu) return;
 
-// Close menu when clicking outside
-document.addEventListener("click", (e) => {
-  if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
-    menu.classList.remove("active");
-    menuToggle.classList.remove("active");
-  }
-});
+  menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+    menuToggle.classList.toggle("active");
+  });
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
+  document.addEventListener("click", (e) => {
+    if (
+      menu.classList.contains("active") &&
+      !menu.contains(e.target) &&
+      !menuToggle.contains(e.target)
+    ) {
+      menu.classList.remove("active");
+      menuToggle.classList.remove("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", handleScroll);
+
+function handleScroll() {
+  const navbar = document.querySelector(".logo");
+  const menuLinks = document.querySelectorAll("#menu a");
+  const scrolled = window.scrollY > 50;
+
+  if (!navbar) return;
+
+  if (scrolled) {
     navbar.classList.add("scrolled");
 
-    // ✅ Ensure text stays white on mobile
     if (window.innerWidth <= 768) {
-      document.querySelectorAll("#menu a").forEach((link) => {
+      menuLinks.forEach((link) => {
         link.style.color = "white";
       });
     }
   } else {
     navbar.classList.remove("scrolled");
 
-    // ✅ Restore original colors when at top
-    document.querySelectorAll("#menu a").forEach((link) => {
-      link.style.color = ""; // Removes inline styles
+    menuLinks.forEach((link) => {
+      link.style.color = "";
     });
   }
-});
+}
 
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".faq-item").forEach((item) => {
+function initFAQAccordion() {
+  const faqItems = document.querySelectorAll(".faq-item");
+  if (!faqItems.length) return;
+
+  faqItems.forEach((item) => {
     item.classList.remove("active");
-    let toggleSign = item.querySelector(".toggle");
+    const toggleSign = item.querySelector(".toggle");
     if (toggleSign) toggleSign.textContent = "+";
 
     item.addEventListener("click", function () {
       this.classList.toggle("active");
-      let toggleSign = this.querySelector(".toggle");
-      toggleSign.textContent = this.classList.contains("active") ? "-" : "+";
+      const toggleSign = this.querySelector(".toggle");
+      if (toggleSign) {
+        toggleSign.textContent = this.classList.contains("active") ? "-" : "+";
+      }
     });
   });
-});
-document.addEventListener("DOMContentLoaded", function () {
+}
+
+function initScrollAnimations() {
   const aboutSection = document.querySelector(".about");
   const statsItems = document.querySelectorAll(".stat-item");
 
-  function revealOnScroll() {
-    let windowHeight = window.innerHeight;
-    let aboutTop = aboutSection.getBoundingClientRect().top;
+  if (!aboutSection && !statsItems.length) return;
 
-    if (aboutTop < windowHeight - 100) {
-      aboutSection.classList.add("visible");
+  function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+
+    if (aboutSection) {
+      const aboutTop = aboutSection.getBoundingClientRect().top;
+      if (aboutTop < windowHeight - 100) {
+        aboutSection.classList.add("visible");
+      }
     }
 
     statsItems.forEach((item) => {
-      let itemTop = item.getBoundingClientRect().top;
+      const itemTop = item.getBoundingClientRect().top;
       if (itemTop < windowHeight - 100) {
         item.classList.add("visible");
       }
     });
   }
+
   window.addEventListener("scroll", revealOnScroll);
   revealOnScroll();
-});
-document.addEventListener("DOMContentLoaded", function () {
+}
+
+function initThemeAnimations() {
   const container = document.querySelector(".container-main");
   const themes = document.querySelectorAll(".theme");
 
-  // Function to check if an element is in the viewport
+  if (!container && !themes.length) return;
+
   function isInViewport(element) {
+    if (!element) return false;
     const rect = element.getBoundingClientRect();
     return rect.top < window.innerHeight - 100;
   }
 
-  // Function to animate elements when they appear
   function animateOnScroll() {
-    if (isInViewport(container)) {
+    if (container && isInViewport(container)) {
       container.classList.add("visible");
     }
 
@@ -107,7 +151,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Run on load and scroll
-  animateOnScroll();
   window.addEventListener("scroll", animateOnScroll);
-});
+  animateOnScroll();
+}
+
+window.addEventListener(
+  "resize",
+  debounce(function () {
+    handleScroll();
+  }, 250)
+);
+
+function debounce(func, wait) {
+  let timeout;
+  return function () {
+    const context = this;
+    const args = arguments;
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(context, args), wait);
+  };
+}
