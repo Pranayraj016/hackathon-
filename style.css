@@ -1163,10 +1163,21 @@ body {
 .faculty-guides .faculty img {
   width: 220px;
   height: 280px;
+  object-fit: cover;
+  /* object-position: 40% 10%; */
   border-radius: 8px;
   display: block;
   max-width: 100%;
   max-height: 100%;
+}
+.faculty-guides .faculty .img10 {
+  object-position: 80% 30%;
+}
+.faculty-guides .faculty .img15 {
+  object-position: 80% 0%;
+}
+.faculty-guides .faculty .img7 {
+  object-position: 80% 70%;
 }
 .faculty-guides .faculty h3 {
   font-size: 1.2rem;
