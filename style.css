@@ -21,7 +21,9 @@ body {
   padding: 15px 20px;
   background: transparent;
   box-shadow: none;
-  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition:
+    background 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
   z-index: 1000;
 }
 .logo img {
@@ -377,7 +379,9 @@ body {
   align-items: center;
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition:
+    opacity 1s ease-out,
+    transform 1s ease-out;
 }
 .about.visible {
   opacity: 1;
@@ -424,7 +428,9 @@ body {
   gap: 10px;
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition:
+    opacity 1s ease-out,
+    transform 1s ease-out;
 }
 .about .stats-section .stat-item.visible {
   opacity: 1;
@@ -603,7 +609,9 @@ body {
   min-height: 60vh;
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition:
+    opacity 1s ease-out,
+    transform 1s ease-out;
 }
 .container-main.visible {
   opacity: 1;
@@ -640,7 +648,9 @@ body {
   width: 100%;
   max-width: 220px;
   opacity: 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 .theme img {
   width: 100%;
@@ -851,7 +861,9 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
   margin-bottom: 15px;
 }
 .mentors .chief-patron img {
@@ -939,7 +951,9 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   margin-bottom: 10px;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 }
 .mentors .main-patron .patron:hover,
 .mentors .main-patron .co-patron:hover,
@@ -969,7 +983,9 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   margin-bottom: 10px;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 }
 .mentors .main-patron .convener:hover,
 .mentors .main-patron .co-convener:hover,
@@ -1291,7 +1307,9 @@ body {
   font-size: 1rem;
   opacity: 0;
   transform: translateY(-10px);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
 }
 .faq .faq-item.active .answer {
   display: block;
@@ -1448,7 +1466,7 @@ body {
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Footer+++++++++++++++++++++++++++++++++++++++++++++++++++ */
 .footer {
-  background: url("../img/footer-bg.jpg") no-repeat center;
+  background: url("./img/footer-bg.jpg") no-repeat center;
   background-size: cover;
   color: white;
   display: flex;
@@ -1711,5 +1729,249 @@ body {
 
   .footer-bottom {
     font-size: 10px;
+  }
+}
+
+/* temporary */
+.organizer-section {
+  background: #e1b44c;
+  padding: 70px 20px;
+  position: relative;
+}
+
+.organizer-section .container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+/* heading */
+.organizer-section .section-heading {
+  text-align: center;
+  position: relative;
+  margin-bottom: 55px;
+}
+
+.organizer-section .section-heading::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #c79a37;
+  top: 50%;
+  left: 0;
+}
+
+.organizer-section .section-heading h2 {
+  display: inline-block;
+  background: #e1b44c;
+  position: relative;
+  z-index: 2;
+  padding: 0 28px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #2d1405;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.organizer-section .line {
+  display: none;
+}
+
+/* layout */
+.organizer-section .profile-row {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+/* left profile */
+.organizer-section .profile-image {
+  width: 230px;
+  flex-shrink: 0;
+}
+
+.organizer-section .profile-image img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 5px solid #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  display: block;
+}
+
+/* content */
+.organizer-section .profile-content {
+  flex: 1;
+}
+
+.organizer-section .profile-content h1 {
+  text-align: center;
+  font-size: 64px;
+  font-weight: 800;
+  color: #2d1405;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.organizer-section .profile-content .tagline {
+  text-align: center;
+  color: #6f4217;
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin-bottom: 32px;
+}
+
+/* hackathon card */
+.organizer-section .hackathon-card {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  background: #f5efe5;
+  border-radius: 16px;
+  padding: 35px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  border: 1px solid #dfc69f;
+}
+
+/* second image wrapper */
+.organizer-section .hackathon-image {
+  width: 420px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* second image */
+.organizer-section .hackathon-image img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+/* details */
+.organizer-section .hackathon-details {
+  flex: 1;
+  padding: 0;
+  text-align: center;
+}
+
+.organizer-section .hackathon-details h3 {
+  font-size: 68px;
+  line-height: 0.95;
+  margin-bottom: 22px;
+  color: #2a1204;
+  font-weight: 800;
+}
+
+.organizer-section .hackathon-details h3 span {
+  display: block;
+  margin-top: 10px;
+  color: #d38710;
+  font-size: 60px;
+}
+
+.organizer-section .hackathon-details .badge {
+  display: inline-block;
+  background: #5a2b07;
+  color: white;
+  padding: 12px 26px;
+  border-radius: 40px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 35px;
+}
+
+.organizer-section .hackathon-details .detail-item {
+  padding: 22px 0;
+  border-bottom: 1px solid #d9c4a0;
+}
+
+.organizer-section .hackathon-details .detail-item:last-child {
+  border-bottom: none;
+}
+
+.organizer-section .hackathon-details .detail-item strong {
+  display: block;
+  font-size: 22px;
+  color: #351808;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.organizer-section .hackathon-details .detail-item p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #5b4635;
+  margin: 0;
+  max-width: 520px;
+  margin-inline: auto;
+}
+
+/* responsive */
+@media (max-width: 1100px) {
+  .organizer-section .profile-row {
+    flex-direction: column;
+  }
+
+  .organizer-section .profile-image {
+    width: 240px;
+  }
+
+  .organizer-section .hackathon-card {
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  .organizer-section .hackathon-image {
+    width: 100%;
+  }
+
+  .organizer-section .hackathon-image img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .organizer-section {
+    padding: 50px 15px;
+  }
+
+  .organizer-section .section-heading h2 {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+
+  .organizer-section .profile-content h1 {
+    font-size: 40px;
+  }
+
+  .organizer-section .profile-content .tagline {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .organizer-section .hackathon-details h3 {
+    font-size: 42px;
+  }
+
+  .organizer-section .hackathon-details h3 span {
+    font-size: 38px;
+  }
+
+  .organizer-section .hackathon-details .detail-item strong {
+    font-size: 18px;
+  }
+
+  .organizer-section .hackathon-details .detail-item p {
+    font-size: 14px;
+  }
+
+  .organizer-section .hackathon-image img {
+    height: 240px;
   }
 }
